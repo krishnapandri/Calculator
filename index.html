@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/474db4af24.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script src="calc.js"></script>
+    
+    <div id="history">
+        <div style="position: relative; top:30px; left:104px; color:rgb(245, 202, 9); font-weight:700; width:100px;">History</div>
+        <div><button class="delhistory" onclick="clearHistory()"><i class="fa-solid fa-trash-can"></i></button></div>
+        <div id="his"></div>
+    </div>
+    <div class="container">
+        <div>
+            <input type="text" class="box1" value="" readonly>
+        </div>
+        <div>
+            <input type="text" class="box2" value="0">
+        </div>
+
+        <div class="body">
+            <div>
+                <button class="scisymbol1" onclick="showHistory()">H</button>
+            </div>
+            <div>
+                <button class="symbol" onclick="clr()">Ac</button>
+                <button class="symbol">Bs</button>
+                <button class="ano" onclick="setval('/')"><b>/</b></button>
+                <button class="ano" onclick="setval('*')"><b>*</b></button>
+            </div>
+
+            <div>
+                <button class="number" onclick="setval('7')">7</button>
+                <button class="number" onclick="setval('8')">8</button>
+                <button class="number" onclick="setval('9')">9</button>
+                <button class="minus" onclick="setval('-')">-</button>
+            </div>
+            <div>
+                <button class="numbermid" onclick="setval('4')">4</button>
+                <button class="numbermid" onclick="setval('5')">5</button>
+                <button class="numbermid" onclick="setval('6')">6</button>
+                <button class="plus" onclick="setval('+')">+</button>
+            </div>
+            <div>
+                <button class="number" onclick="setval('1')">1</button>
+                <button class="number" onclick="setval('2')">2</button>
+                <button class="number" onclick="setval('3')">3</button>
+            </div>
+            <div>
+                <button class="number0" onclick="setval('0')">0</button>
+                <button class="numberdot" onclick="setval('.')">.</button>
+                <button class="equal" onclick="getAns()">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
